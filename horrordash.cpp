@@ -3,7 +3,7 @@
 	// Author      : Ayan Hafeez
 	// Version     :
 	// Copyright   : Ayan Hafeez's solutions for DMOJ
-	// Description : Hello World in C++, Ansi-style
+	// Description : My Stuff
 	//============================================================================
 
 	#include <iostream>
