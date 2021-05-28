@@ -1,10 +1,12 @@
-name: cpplint
-on: [push, pull_request]
+name: lint
+
+on: [pull_request]
 jobs:
-  cpplint:
+  clang-tidy:
+    name: clang-tidy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-python@v1
-    - run: pip install cpplint
-    - run: cpplint --recursive .
+      - name: clang-tidy check
+        uses: smay1613/clang-tidy-action@master
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
