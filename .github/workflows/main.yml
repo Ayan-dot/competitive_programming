@@ -34,14 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: C/C++ code linter (clang-tidy, clang-format, and cppcheck)
+        uses: ArtificialAmateur/cpp-linter-action@0.01
+
       # You may pin to the exact commit or the version.
         # uses: shenxianpeng/cpp-linter-action@dbace28451a3df0da841873fdb4df0da3d68e52d
-  clang-tidy:
-    name: clang-tidy
-    runs-on: ubuntu-latest
-    steps:
-      - name: clang-tidy check
-        uses: smay1613/clang-tidy-action@master
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-      
+  
